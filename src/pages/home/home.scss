@@ -1,0 +1,198 @@
+// @import '../../sass/index.scss';
+@import '../../sass/index.scss';
+
+
+.home {
+
+  .container {
+    // border: 1px solid red;
+    // overscroll-behavior-block: contain;
+    overscroll-behavior-block: none;
+  }
+
+  .cloud-extension {
+    position: absolute;
+    background-color: #a71a1a8f;
+    height: 38rem;
+    width: 100%;
+    right: 0;
+    top: 110%;
+  }
+
+  .cloud-f1 {
+    position: absolute;
+    top: 31.5rem;
+    left: -8rem;
+
+    width: 170%;
+    height: auto;
+  }
+
+  .cloud-f2 {
+    position: absolute;
+    top: 24rem;
+    left: 7rem;
+
+    width: 170%;
+    height: auto;
+  }
+
+  .cloud-back {
+    position: absolute;
+    top: 27.5rem;
+    left: -2.5rem;
+    width: 5.8rem;
+    height: auto;
+  }
+
+  .cloud-shoulder {
+    position: absolute;
+    top: 20rem;
+    right: -2rem;
+    width: 4rem;
+    height: auto;
+  }
+
+  .cloud-head {
+    position: absolute;
+    top: 2rem;
+    right: -2.3rem;
+    width: 11.2rem;
+    height: auto;
+  }
+
+  .zack-pic {
+    position: absolute;
+    top: -4rem;
+    right: -10.6rem;
+
+    width: 32.7rem;
+    height: auto;
+  }
+
+  .kite {
+    position: absolute;
+    top: 5rem;
+    right: 12rem;
+
+    width: 3.5rem;
+    height: auto;
+  }
+
+  .text-zack {
+    position: absolute;
+    top: 18rem;
+    left: 1rem;
+
+    width: 10.7rem;
+    height: auto;
+  }
+
+  .text-caster {
+    position: absolute;
+    top: 22.6rem;
+    left: 1.5rem;
+
+    width: 14rem;
+    height: auto;
+  }
+
+  .hello {
+    position: absolute;
+    top: 17.6rem;
+    left: 1rem;
+
+    width: 7.3rem;
+    height: auto;
+  }
+
+  .text-paragraph {
+    position: absolute;
+    top: 27rem;
+    left: 3.2rem;
+
+    width: 9.5rem;
+    height: auto;
+  }
+
+  // heart ------------
+
+  .heart-front {
+    position: absolute;
+    left: -3rem;
+    top: 36rem;
+    width: 9rem;
+    height: auto;
+  }
+
+  .heart-head {
+    position: absolute;
+    right: -2rem;
+    top: 11rem;
+    width: 9rem;
+    height: auto;
+  }
+
+  .heart-zack {
+    position: absolute;
+    top: 22rem;
+    left: -0.8rem;
+
+    width: 4.2rem;
+    height: auto;
+  }
+
+  .heart-caster {
+    position: absolute;
+    top: 25rem;
+    left: 12rem;
+
+    width: 3rem;
+    height: auto;
+  }
+
+  // ----------
+
+  .plane {
+    position: absolute;
+    top: 13.5rem;
+    left: 2rem;
+
+    width: 3.8rem;
+    height: auto;
+  }
+
+  .star-1 {
+    position: absolute;
+    top: -5rem;
+    left: 6rem;
+
+    height: 10rem;
+    width: auto;
+  }
+
+
+  .star-2 {
+    position: absolute;
+    top: -1rem;
+    left: 3.5rem;
+
+    height: 10rem;
+    width: auto;
+  }
+
+  .puzzle {
+    position: absolute;
+    top: 32rem;
+    left: -3rem;
+
+    width: 5rem;
+    height: auto;
+  }
+
+  .try {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+  }
+}
