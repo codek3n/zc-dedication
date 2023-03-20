@@ -1,7 +1,7 @@
 import React from 'react';
 import backGround from '../../assets/images/background.png';
 import cloudBack from '../../assets/images/cloud-back.png';
-import cloudExtended from '../../assets/images/cloud-extended.png';
+// import cloudExtended from '../../assets/images/cloud-extended.png';
 import cloudF1 from '../../assets/images/cloud-f1.png';
 import cloudF2 from '../../assets/images/cloud-f2.png';
 import cloudHead from '../../assets/images/cloud-head.png';
@@ -31,8 +31,8 @@ import './home.scss';
 const Home = () => {
   return (
     <div className='home'>
-      {/* <Parallax pages={2} className='container'> */}
-      <Parallax pages={2} className='container'>
+      <Parallax pages={1.31} className='container'>
+        {/* <Parallax pages={2} className='container'> */}
 
         <ParallaxLayer
           speed={0.01}
@@ -106,19 +106,27 @@ const Home = () => {
           <img src={cloudF2} className='cloud-f2' />
         </ParallaxLayer>
 
-        {/* <ParallaxLayer speed={1}>
+        <ParallaxLayer speed={1} className='rsvp-container'>
           <img src={cloudF1} alt="" className='cloud-f1' />
-        </ParallaxLayer> */}
 
-        <ParallaxLayer speed={1}>
-          <img src={cloudExtended} alt="" className='cloud-f1' />
+          <div className='cloud-extension'>
+            {/* <ParallaxLayer speed={1.2} className='rsvp-container-child'>
+              <h1 className='try'>SEE YOU</h1>
+            </ParallaxLayer> */}
+          </div>
+
+
         </ParallaxLayer>
+
+        {/* <ParallaxLayer speed={1}>
+          <img src={cloudExtended} alt="" className='cloud-f1' />
+        </ParallaxLayer> */}
 
         <ParallaxLayer speed={0.2}>
           <img src={heartHead} className='heart-head' />
         </ParallaxLayer>
-
-        {/* <ParallaxLayer speed={1}>
+        {/* 
+        <ParallaxLayer speed={1}>
           <div className='cloud-extension'></div>
         </ParallaxLayer> */}
 
@@ -126,9 +134,10 @@ const Home = () => {
           <img src={heartFront} className='heart-front' />
         </ParallaxLayer>
 
-        {/* <ParallaxLayer speed={1.6} offset={1}>
+        {/* <ParallaxLayer speed={1.2} offset={1}> */}
+        <ParallaxLayer speed={1.2} offset={.6}>
           <h1 className='try'>SEE YOU</h1>
-        </ParallaxLayer> */}
+        </ParallaxLayer>
 
       </Parallax>
 

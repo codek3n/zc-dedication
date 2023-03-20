@@ -4,28 +4,44 @@
 
 .home {
 
+  // width: 390px;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  // margin-inline: 10rem;
+
+  // max-width: 390px;
+
+
   .container {
-    // border: 1px solid red;
+    // border: 3px solid rgb(68, 0, 255);
     // overscroll-behavior-block: contain;
+
+    margin-inline: auto;
+    max-width: 400px;
+
     overscroll-behavior-block: none;
   }
 
   .cloud-extension {
-    position: absolute;
+    position: relative;
     background-color: #a71a1a8f;
-    height: 38rem;
+    height: 120vh;
     width: 100%;
-    right: 0;
-    top: 110%;
+    // right: 0;
+    top: 20rem;
+    // bottom: -10rem;
   }
 
   .cloud-f1 {
-    position: absolute;
+    position: relative;
     top: 31.5rem;
     left: -8rem;
 
     width: 170%;
     height: auto;
+
+    // border: 1px solid red;
   }
 
   .cloud-f2 {
@@ -192,7 +208,25 @@
 
   .try {
     // position: absolute;
-    // top: 0;
+    // margin-top: 50rem;
+    // top: 50rem;
+    // top: 120%;
+    // top: 0%;
+    // top: -70rem;
     // right: 0;
+    margin-top: -43rem;
+
+    border: 1px solid red;
   }
+
+  // .rsvp-container {
+  //   position: relative;
+  // }
+
+  // .rsvp-container-child {
+  //   position: absolute;
+  //   top: 100rem;
+  //   right: 10rem;
+  //   border: 1px solid red;
+  // }
 }

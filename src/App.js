@@ -3,7 +3,7 @@ import Home from './pages/home/Home.jsx';
 
 const App = () => {
   return (
-    <div>
+    <div className='app'>
       <Home />
     </div>
   )
