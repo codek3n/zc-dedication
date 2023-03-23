@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import backGround from '../../assets/images/background.png';
 import cloudBack from '../../assets/images/cloud-back.png';
 // import cloudExtended from '../../assets/images/cloud-extended.png';
@@ -24,14 +24,44 @@ import textParagraph from '../../assets/images/paragraph.png';
 import zackPic from '../../assets/images/zack-pic.png';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { easeInOut, motion } from 'framer-motion';
+
+import Rsvp from '../rsvp/Rsvp';
 
 // import '../../sass/index.scss';
 import './home.scss';
 
 const Home = () => {
+  // const [panning, setPanning] = useState('')
+
+  // const container = {
+  //   hidden: { opacity: 0 },
+  //   show: {
+  //     y: '10rem',
+  //     x: '5rem',
+  //     opacity: 1,
+  //     transition: {
+  //       // delayChildren: 1,
+  //       delay: .2
+  //     }
+  //   }
+  // }
+
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+  }
+
   return (
-    <div className='home'>
-      <Parallax pages={1.31} className='container'>
+    // <div className='home'>
+    <motion.div
+      // animate={{ x: 100 }}
+      transition={{ type: "spring", stiffness: 100 }} className='home'>
+      {/* <Parallax pages={1.31} className='container'> */}
+      {/* <Parallax pages={1.9} className='container'> */}
+      <Parallax pages={2} className='container'>
+        {/* <Parallax pages={4} className='container'> */}
         {/* <Parallax pages={2} className='container'> */}
 
         <ParallaxLayer
@@ -78,6 +108,8 @@ const Home = () => {
           <img src={textHello} className='hello' />
         </ParallaxLayer>
 
+
+
         <ParallaxLayer speed={0.1}>
           <img src={zackPic} className='zack-pic' />
         </ParallaxLayer>
@@ -110,41 +142,34 @@ const Home = () => {
           <img src={cloudF1} alt="" className='cloud-f1' />
 
           <div className='cloud-extension'>
-            {/* <ParallaxLayer speed={1.2} className='rsvp-container-child'>
-              <h1 className='try'>SEE YOU</h1>
-            </ParallaxLayer> */}
           </div>
 
-
         </ParallaxLayer>
-
-        {/* <ParallaxLayer speed={1}>
-          <img src={cloudExtended} alt="" className='cloud-f1' />
-        </ParallaxLayer> */}
 
         <ParallaxLayer speed={0.2}>
           <img src={heartHead} className='heart-head' />
         </ParallaxLayer>
-        {/* 
-        <ParallaxLayer speed={1}>
-          <div className='cloud-extension'></div>
-        </ParallaxLayer> */}
 
         <ParallaxLayer speed={1.6}>
           <img src={heartFront} className='heart-front' />
         </ParallaxLayer>
 
-        {/* <ParallaxLayer speed={1.2} offset={1}> */}
-        <ParallaxLayer speed={1.2} offset={.6}>
-          <h1 className='try'>SEE YOU</h1>
+        {/* <ParallaxLayer offset={1}> */}
+        <ParallaxLayer offset={1} speed={.2}>
+          <motion.div className='rsvp__container'>
+            <Rsvp />
+          </motion.div>
         </ParallaxLayer>
 
-      </Parallax>
+        {/* <ParallaxLayer speed={1.2} offset={1}> */}
+        {/* <ParallaxLayer speed={1.2} offset={.6}>
+          <motion.h2 animate={{ x: 100, fontSize: '50px' }}
+            transition={{ type: "spring", stiffness: 100 }} className='try'>SEE YOU 🚗</motion.h2>
+        </ParallaxLayer> */}
 
+      </Parallax >
 
-
-
-    </div>
+    </motion.div >
   )
 }
 

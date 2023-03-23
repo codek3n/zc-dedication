@@ -1,7 +1,28 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   outline-style: none;
+}
+
+body {
+  // background-color: rgb(36, 34, 34);
+  background-color: #fff;
+
+  ::-webkit-scrollbar {
+    width: .2rem;
+
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #128fb5af;
+    // background-color: $color_line;
+    border-radius: 50px;
+
+  }
 }
