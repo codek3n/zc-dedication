@@ -1,0 +1,67 @@
+import React, { useEffect, useState } from 'react';
+import Home from './pages/home/Home.jsx';
+import { ClipLoader } from 'react-spinners';
+
+
+const App = () => {
+  const [isLoading, setLoading] = useState(false);
+  const [result, setResult] = useState()
+
+  // const closeLoading = () => {
+  //   setLoading(false)
+  // }
+  // useEffect(() => {
+  //   setTimeout(closeLoading, 2000)
+  // }, [])
+
+  // useEffect(() => {
+  //   const waiting = async () => {
+  //     setLoading(true);
+  //     const done = await (
+  //       // <div className='mobile'>
+  //       <Home />
+  //       // </div>
+  //     )
+
+  //     setResult(done)
+  //     setLoading(false)
+  //   }
+
+  //   waiting()
+  // }, [])
+
+
+  return (
+    <div className='app'>
+
+      <div className='pc'>
+        open it to your mobile phone 🤙
+      </div>
+
+      <div className='mobile'>
+        <Home />
+      </div>
+
+      {/* 
+      <div className='mobile'>
+        {isLoading ? <div className='loading__container'>
+          <ClipLoader className='loading-icon' />
+        </div> : <Home />}
+      </div> */}
+
+      {/* 
+      <div className='mobile'>
+        {isLoading ? <div className='loading__container'>
+          <ClipLoader className='loading-icon' />
+        </div> :
+          result
+        }
+      </div>
+
+      {result} */}
+
+    </div>
+  )
+}
+
+export default App

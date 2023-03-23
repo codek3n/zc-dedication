@@ -1,13 +1,10 @@
 import { spring } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import thisIsDate from '../../assets/images/date.png';
 
 import { easeInOut, motion } from 'framer-motion';
 
 import { IoIosSend } from 'react-icons/io';
-
-import { useInView } from 'react-intersection-observer';
-
 
 // import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
@@ -19,9 +16,6 @@ const Rsvp = () => {
   const [isOn, setIsOn] = useState(false);
   const [fillOut, setFillOut] = useState('')
   const [invited, isInvited] = useState(false)
-
-  const { ref: myRef, inView } = useInView();
-
 
   const toggleSwitch = () => setIsOn(!isOn);
 
@@ -37,29 +31,27 @@ const Rsvp = () => {
       e.preventDefault()
     } else {
       e.preventDefault()
-      // console.log('yehey')
+      console.log('yehey')
       isInvited(true)
+      // navigate('/search')
+      // setQuery(searchQuery)
+      // setPageNumber(1)
     }
   }
 
 
   return (
-    // <div className='rsvp' id='rsvp'>
-    <div
-      // className='rsvp'>
-
-      className={inView ? 'rsvp show' : 'rsvp hide'}>
-      {/* <div ref={myRef} className='hidden__trigger'></div> */}
-      < div className='container' >
+    <div className='rsvp'>
+      <div className='container'>
         <h1>
           Come to celebrate with us
         </h1>
 
         <div className='date'>
-          <img ref={myRef} src={thisIsDate} alt="" className='date__img' />
+          <img src={thisIsDate} alt="" className='date__img' />
         </div>
 
-        <h3 >04:00 pm</h3>
+        <h3>04:00 pm</h3>
 
         <p>Jollibee - Level 1 Portal Mall, Congressional Road,
           Brgy. Poblacion 1, Gen. Mariano Alvarez.
@@ -71,8 +63,7 @@ const Rsvp = () => {
             <h1>are you in?</h1>
 
 
-            {/* <button className='switch__container' data-isOn={isOn} onClick={toggleSwitch}> */}
-            <button className='switch__container' data-ison={isOn} onClick={toggleSwitch}>
+            <button className='switch__container' data-isOn={isOn} onClick={toggleSwitch}>
               <motion.div layout transition={spring} className='switch' />
             </button>
 
@@ -116,8 +107,8 @@ const Rsvp = () => {
 
         </div>
 
-      </div >
-    </div >
+      </div>
+    </div>
   )
 }
 

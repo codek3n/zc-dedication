@@ -24,28 +24,19 @@ import textParagraph from '../../assets/images/paragraph.png';
 import zackPic from '../../assets/images/zack-pic.png';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import { easeInOut, motion } from 'framer-motion';
+// import { easeInOut, motion } from 'framer-motion';
 
 import Rsvp from '../rsvp/Rsvp';
 
-// import '../../sass/index.scss';
+// import { useInView } from 'react-intersection-observer';
+
 import './home.scss';
 
 const Home = () => {
-  // const [panning, setPanning] = useState('')
+  // const { ref: myRef, inView, entry } = useInView();
 
-  // const container = {
-  //   hidden: { opacity: 0 },
-  //   show: {
-  //     y: '10rem',
-  //     x: '5rem',
-  //     opacity: 1,
-  //     transition: {
-  //       // delayChildren: 1,
-  //       delay: .2
-  //     }
-  //   }
-  // }
+  // console.log('myRef', myRef.current)
+
 
 
   const item = {
@@ -54,15 +45,11 @@ const Home = () => {
   }
 
   return (
-    // <div className='home'>
-    <motion.div
-      // animate={{ x: 100 }}
+    <div
       transition={{ type: "spring", stiffness: 100 }} className='home'>
-      {/* <Parallax pages={1.31} className='container'> */}
-      {/* <Parallax pages={1.9} className='container'> */}
+
       <Parallax pages={2} className='container'>
-        {/* <Parallax pages={4} className='container'> */}
-        {/* <Parallax pages={2} className='container'> */}
+
 
         <ParallaxLayer
           speed={0.01}
@@ -154,12 +141,20 @@ const Home = () => {
           <img src={heartFront} className='heart-front' />
         </ParallaxLayer>
 
-        {/* <ParallaxLayer offset={1}> */}
-        <ParallaxLayer offset={1} speed={.2}>
-          <motion.div className='rsvp__container'>
+        <ParallaxLayer offset={1}>
+          <div>
             <Rsvp />
-          </motion.div>
+          </div>
         </ParallaxLayer>
+
+        {/* <ParallaxLayer offset={1} >
+          <div className={inView ? 'show' : 'hide'}>
+
+            <Rsvp />
+            <div ref={myRef} className='multo' />
+          </div>
+        </ParallaxLayer> */}
+
 
         {/* <ParallaxLayer speed={1.2} offset={1}> */}
         {/* <ParallaxLayer speed={1.2} offset={.6}>
@@ -169,7 +164,7 @@ const Home = () => {
 
       </Parallax >
 
-    </motion.div >
+    </div >
   )
 }
 
