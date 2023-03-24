@@ -91,14 +91,16 @@ const Home = () => {
           <img src={plane} className='plane' />
         </ParallaxLayer>
 
-        <ParallaxLayer speed={0.3}>
-          <img src={textHello} className='hello' />
-        </ParallaxLayer>
+     
 
 
 
         <ParallaxLayer speed={0.1}>
           <img src={zackPic} className='zack-pic' />
+        </ParallaxLayer>
+
+        <ParallaxLayer speed={0.3}>
+          <img src={textHello} className='hello' />
         </ParallaxLayer>
 
         <ParallaxLayer speed={0.4}>
